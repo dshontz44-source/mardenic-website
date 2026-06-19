@@ -15,7 +15,7 @@ const HIGHLIGHTS = [
     heading: "Safety isn't a policy. It's the architecture.",
     body: "Every system we develop is stress-tested against real-world failure modes. Alignment constraints are built in from day one — not bolted on at the end.",
     cta: "Our principles",
-    bg: "#FFFFFF",
+    bg: "#F0EFEC",
   },
   {
     label: "Korith",
@@ -23,7 +23,7 @@ const HIGHLIGHTS = [
     heading: "Our first product is coming.",
     body: "Korith is an AI system built for teams who need power without unpredictability. Currently in development — join the waitlist for early access.",
     cta: "Join the waitlist",
-    bg: "#F0EFEC",
+    bg: "#FFFFFF",
   },
 ] satisfies { label: string; href: string; heading: string; body: string; cta: string; bg: string }[];
 

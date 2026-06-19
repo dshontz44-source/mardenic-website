@@ -68,6 +68,19 @@ body {
 ::-webkit-scrollbar-thumb { background: #CBC9C2; border-radius: 2px; }
 ::-webkit-scrollbar-thumb:hover { background: #A8A59E; }
 
+.hero-cta-primary {
+  background: #1A1917;
+  color: #F7F6F3;
+}
+.hero-cta-primary:hover { background: #3D3C38; }
+
+.hero-cta-outline {
+  color: #57554F;
+  border: 1px solid #CBC9C2;
+  background: transparent;
+}
+.hero-cta-outline:hover { border-color: #78756E; color: #1A1917; }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
