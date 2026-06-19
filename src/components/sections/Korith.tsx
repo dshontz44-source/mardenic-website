@@ -24,7 +24,7 @@ export default function Korith() {
         </p>
       </div>
 
-      <div className="px-6 lg:px-16 py-12 grid grid-cols-1 md:grid-cols-2 gap-12" style={{ background: "#F7F6F3", borderBottom: "1px solid #E4E2DD" }}>
+      <div className="px-6 lg:px-16 py-12 grid grid-cols-1 md:grid-cols-2 gap-12" style={{ background: "#F7F6F3" }}>
         <div>
           <p className="text-xs tracking-[0.2em] uppercase font-medium mb-5" style={{ color: "#A8A59E" }}>Capabilities</p>
           <ul className="space-y-3">
@@ -44,6 +44,19 @@ export default function Korith() {
           </p>
           <WaitlistForm />
         </div>
+      </div>
+
+      <div
+        className="flex items-end px-6 lg:px-12 py-10 overflow-hidden"
+        style={{ background: "#F7F6F3", borderTop: "1px solid #E4E2DD" }}
+      >
+        <span
+          className="font-bold tracking-[0.08em] uppercase leading-none select-none"
+          style={{ fontSize: "clamp(4rem, 18vw, 14rem)", color: "#E4E2DD" }}
+          aria-hidden="true"
+        >
+          MARDENIC
+        </span>
       </div>
     </div>
   );
