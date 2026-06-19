@@ -1,10 +1,8 @@
 import Link from "next/link";
-import { LogoMark } from "@/components/Logo";
 
 export default function NotFound() {
   return (
     <div className="min-h-screen bg-black flex flex-col items-center justify-center px-6 text-center">
-      <LogoMark size="lg" className="mb-10 opacity-40" />
       <p className="text-xs tracking-[0.3em] uppercase text-white/25 mb-6">404</p>
       <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6 tracking-tight">
         Nothing here.

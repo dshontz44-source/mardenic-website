@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { LogoMark } from "@/components/Logo";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -19,7 +18,6 @@ export default function PrivacyPage() {
         </Link>
 
         <div className="flex items-center gap-3 mb-3">
-          <LogoMark size="sm" />
           <span className="text-xs tracking-[0.25em] uppercase text-white/30">Mardenic</span>
         </div>
 

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SectionReveal from "@/components/ui/SectionReveal";
 
 const FEATURES = [
@@ -45,12 +46,12 @@ export default function ForCompanies() {
                 auditable, and safe to put in production.
               </p>
               <div>
-                <a
-                  href="#korith"
+                <Link
+                  href="/korith"
                   className="inline-flex items-center gap-2 text-sm font-medium text-black border border-black/20 px-6 py-3 rounded-sm hover:bg-black hover:text-white hover:border-black transition-all duration-200"
                 >
                   Join the partner waitlist →
-                </a>
+                </Link>
               </div>
             </SectionReveal>
           </div>

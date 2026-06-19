@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SectionReveal from "@/components/ui/SectionReveal";
 
 export default function Contact() {
@@ -26,13 +27,13 @@ export default function Contact() {
 
         <SectionReveal delay={150}>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="#korith"
+            <Link
+              href="/korith"
               className="group text-base font-medium bg-white text-black px-10 py-4 rounded-sm hover:bg-white/90 transition-all duration-200 flex items-center gap-2"
             >
               Join the Korith Waitlist
               <span className="group-hover:translate-x-0.5 transition-transform duration-200">→</span>
-            </a>
+            </Link>
             <a
               href="mailto:hello@mardenic.com"
               className="text-base text-white/50 hover:text-white border border-white/20 hover:border-white/40 px-10 py-4 rounded-sm transition-all duration-200"

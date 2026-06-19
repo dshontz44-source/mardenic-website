@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import { LogoMark } from "@/components/Logo";
 
 export default function Error({
   error,
@@ -16,7 +15,6 @@ export default function Error({
 
   return (
     <div className="min-h-screen bg-black flex flex-col items-center justify-center px-6 text-center">
-      <LogoMark size="lg" className="mb-10 opacity-40" />
       <p className="text-xs tracking-[0.3em] uppercase text-white/25 mb-6">Error</p>
       <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6 tracking-tight">
         Something went wrong.

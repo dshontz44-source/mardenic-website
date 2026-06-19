@@ -1,9 +1,9 @@
 export const NAV_LINKS = [
-  { label: "What We Do", href: "#about" },
-  { label: "Safety", href: "#safety" },
-  { label: "Korith", href: "#korith" },
-  { label: "Research", href: "#research" },
-  { label: "Contact", href: "#contact" },
+  { label: "What We Do", href: "/about" },
+  { label: "Safety", href: "/safety" },
+  { label: "Korith", href: "/korith" },
+  { label: "Research", href: "/research" },
+  { label: "Contact", href: "/contact" },
 ] as const;
 
 export const LEGAL_LINKS = [

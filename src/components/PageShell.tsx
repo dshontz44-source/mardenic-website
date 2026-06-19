@@ -1,14 +1,13 @@
 import Header from "@/components/Header";
-import Hero from "@/components/sections/Hero";
 import Footer from "@/components/sections/Footer";
 import CookieBanner from "@/components/CookieBanner";
 
-export default function HomePage() {
+export default function PageShell({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Header />
-      <main id="main-content">
-        <Hero />
+      <main id="main-content" className="pt-16">
+        {children}
       </main>
       <Footer />
       <CookieBanner />

@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_auto] gap-12 md:gap-16 pb-14 border-b border-white/[0.06]">
           {/* Brand */}
           <div>
-            <Logo size="sm" className="mb-5" />
+            <Logo className="mb-5" />
             <p className="text-sm text-white/35 leading-relaxed max-w-xs">
               AI research and development — without compromising safety.
             </p>
