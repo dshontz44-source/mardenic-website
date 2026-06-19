@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 // Simple in-memory rate limiter (resets per cold start; fine for MVP)
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT = 3;
@@ -34,6 +32,7 @@ function isValidEmail(email: string): boolean {
 
 export async function POST(req: NextRequest) {
   try {
+    const resend = new Resend(process.env.RESEND_API_KEY);
     const ip = getClientIp(req);
 
     // Rate limit
