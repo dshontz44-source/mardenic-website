@@ -50,11 +50,11 @@ export default function Contact() {
           ))}
         </div>
 
-        <blockquote className="pt-16 lg:pt-24 max-w-xl">
-          <p className="text-2xl lg:text-3xl font-medium leading-snug tracking-tight" style={{ color: "#1A1917" }}>
+        <blockquote className="pt-14 max-w-xl">
+          <p className="text-base leading-relaxed" style={{ color: "#78756E" }}>
             "The best AI isn't built alone."
           </p>
-          <footer className="mt-5 text-xs tracking-[0.2em] uppercase" style={{ color: "#A8A59E" }}>Mardenic</footer>
+          <footer className="mt-3 text-xs tracking-[0.2em] uppercase" style={{ color: "#A8A59E" }}>Mardenic</footer>
         </blockquote>
       </div>
     </div>

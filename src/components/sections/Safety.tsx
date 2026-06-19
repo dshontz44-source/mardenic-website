@@ -35,10 +35,10 @@ export default function Safety() {
           internal safety review, it does not ship — regardless of competitive pressure.
         </p>
         <blockquote className="max-w-xl">
-          <p className="text-2xl lg:text-3xl font-medium leading-snug tracking-tight" style={{ color: "#1A1917" }}>
+          <p className="text-base leading-relaxed" style={{ color: "#78756E" }}>
             "We don't race to ship. We race to get it right."
           </p>
-          <footer className="mt-5 text-xs tracking-[0.2em] uppercase" style={{ color: "#78756E" }}>Mardenic</footer>
+          <footer className="mt-3 text-xs tracking-[0.2em] uppercase" style={{ color: "#A8A59E" }}>Mardenic</footer>
         </blockquote>
       </div>
     </div>
