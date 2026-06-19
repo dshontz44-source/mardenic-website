@@ -6,7 +6,7 @@ export default function Korith() {
     <div>
       <div className="px-6 lg:px-16 py-14" style={{ background: "#FFFFFF", borderBottom: "1px solid #E4E2DD" }}>
         <div className="flex items-center gap-3 mb-6">
-          <p className="text-xs tracking-[0.2em] uppercase font-medium" style={{ color: "#A8A59E" }}>Korith</p>
+          <p className="text-xs tracking-[0.2em] uppercase font-medium" style={{ color: "#A8A59E" }}>Mardenic — Korith</p>
           <span className="text-xs font-medium px-2.5 py-1 rounded-sm" style={{ background: "#F0EFEC", border: "1px solid #E4E2DD", color: "#78756E" }}>
             In Development
           </span>

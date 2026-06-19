@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <div>
       <div className="px-6 lg:px-16 py-14" style={{ background: "#FFFFFF", borderBottom: "1px solid #E4E2DD" }}>
-        <p className="text-xs tracking-[0.2em] uppercase font-medium mb-6" style={{ color: "#A8A59E" }}>Contact</p>
+        <p className="text-xs tracking-[0.2em] uppercase font-medium mb-6" style={{ color: "#A8A59E" }}>Mardenic — Contact</p>
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight mb-5" style={{ color: "#1A1917" }}>
           Ready to build the future of AI — together?
         </h1>

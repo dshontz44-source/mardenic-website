@@ -33,7 +33,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="mt-6 pt-6 flex items-center justify-between" style={{ borderTop: "1px solid #E4E2DD" }}>
-        <span className="text-xs tracking-[0.1em] uppercase" style={{ color: "#A8A59E" }}>Mardenic</span>
+        <span className="text-sm font-semibold tracking-[0.16em] uppercase" style={{ color: "#78756E" }}>Mardenic</span>
         <span className="text-xs" style={{ color: "#A8A59E" }}>&copy; {year} Mardenic. All rights reserved.</span>
       </div>
     </footer>
