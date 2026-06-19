@@ -11,30 +11,28 @@ export function SidebarDesktop() {
 
   return (
     <aside
-      className="hidden lg:flex flex-col fixed left-0 top-0 bottom-0 w-56 border-r border-white/[0.07] bg-black z-40 px-6 py-8"
+      className="hidden lg:flex flex-col fixed left-0 top-0 bottom-0 w-52 border-r border-gray-200 bg-white z-40 px-5 py-8"
       aria-label="Site navigation"
     >
-      {/* Wordmark */}
       <Link
         href="/"
-        className="text-white font-semibold tracking-[0.18em] text-sm uppercase hover:opacity-70 transition-opacity mb-12 select-none"
+        className="text-gray-900 font-semibold tracking-[0.16em] text-sm uppercase hover:opacity-60 transition-opacity mb-10 select-none"
         aria-label="Mardenic — home"
       >
         MARDENIC
       </Link>
 
-      {/* Nav tabs */}
-      <nav className="flex flex-col gap-1 flex-1">
+      <nav className="flex flex-col gap-0.5 flex-1" aria-label="Primary">
         {NAV_LINKS.map((link) => {
           const active = pathname === link.href || pathname.startsWith(link.href + "/");
           return (
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm px-3 py-2.5 rounded-sm transition-all duration-150 tracking-wide ${
+              className={`text-sm px-3 py-2 rounded-sm transition-all duration-150 ${
                 active
-                  ? "bg-white/10 text-white font-medium"
-                  : "text-white/40 hover:text-white hover:bg-white/5"
+                  ? "bg-gray-100 text-gray-900 font-medium"
+                  : "text-gray-500 hover:text-gray-900 hover:bg-gray-50"
               }`}
             >
               {link.label}
@@ -43,17 +41,13 @@ export function SidebarDesktop() {
         })}
       </nav>
 
-      {/* Bottom: Join Waitlist */}
-      <div className="mt-auto pt-8 border-t border-white/[0.07]">
+      <div className="mt-auto pt-6 border-t border-gray-200">
         <Link
           href="/korith"
-          className="block w-full text-center text-xs font-medium bg-white text-black px-4 py-2.5 rounded-sm hover:bg-white/90 transition-colors duration-200 tracking-wide"
+          className="block w-full text-center text-xs font-medium bg-gray-900 text-white px-4 py-2.5 rounded-sm hover:bg-gray-700 transition-colors duration-200"
         >
           Join Waitlist
         </Link>
-        <p className="text-xs text-white/20 text-center mt-4 leading-relaxed">
-          AI Research &<br />Development
-        </p>
       </div>
     </aside>
   );
@@ -66,12 +60,10 @@ export function MobileHeader() {
   const triggerRef = useRef<HTMLButtonElement>(null);
   const pathname = usePathname();
 
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
+  useEffect(() => { setOpen(false); }, [pathname]);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -91,7 +83,7 @@ export function MobileHeader() {
     if (!open) return;
     const el = drawerRef.current;
     if (!el) return;
-    const focusable = el.querySelectorAll<HTMLElement>('a, button, [tabindex]:not([tabindex="-1"])');
+    const focusable = el.querySelectorAll<HTMLElement>('a, button');
     focusable[0]?.focus();
     const first = focusable[0];
     const last = focusable[focusable.length - 1];
@@ -112,12 +104,12 @@ export function MobileHeader() {
   return (
     <>
       <header
-        className={`lg:hidden fixed top-0 left-0 right-0 z-50 h-14 flex items-center justify-between px-5 transition-all duration-300 ${
-          scrolled ? "bg-black/90 backdrop-blur-md border-b border-white/10" : "bg-transparent"
+        className={`lg:hidden fixed top-0 left-0 right-0 z-50 h-14 flex items-center justify-between px-5 bg-white transition-shadow duration-200 ${
+          scrolled ? "shadow-[0_1px_0_#e8e8e8]" : ""
         }`}
         role="banner"
       >
-        <Link href="/" className="text-white font-semibold tracking-[0.18em] text-sm uppercase hover:opacity-70 transition-opacity">
+        <Link href="/" className="text-gray-900 font-semibold tracking-[0.16em] text-sm uppercase hover:opacity-60 transition-opacity">
           MARDENIC
         </Link>
         <button
@@ -125,7 +117,7 @@ export function MobileHeader() {
           onClick={() => setOpen(true)}
           aria-label="Open navigation"
           aria-expanded={open}
-          className="p-2 -mr-2 text-white hover:text-white/70 transition-colors"
+          className="p-2 -mr-2 text-gray-600 hover:text-gray-900 transition-colors"
         >
           <Menu size={20} strokeWidth={1.5} />
         </button>
@@ -133,28 +125,28 @@ export function MobileHeader() {
 
       {open && (
         <div className="fixed inset-0 z-50 lg:hidden" role="dialog" aria-modal="true" aria-label="Navigation">
-          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" onClick={close} aria-hidden="true" />
+          <div className="absolute inset-0 bg-black/20" onClick={close} aria-hidden="true" />
           <div
             ref={drawerRef}
-            className="absolute right-0 top-0 bottom-0 w-64 bg-[#0a0a0a] border-l border-white/10 flex flex-col"
-            style={{ animation: "slideInRight 0.22s cubic-bezier(0.22,1,0.36,1) forwards" }}
+            className="absolute right-0 top-0 bottom-0 w-64 bg-white border-l border-gray-200 flex flex-col"
+            style={{ animation: "slideInRight 0.2s cubic-bezier(0.22,1,0.36,1) forwards" }}
           >
-            <div className="flex items-center justify-between px-6 py-5 border-b border-white/10">
-              <span className="text-white font-semibold tracking-[0.18em] text-sm uppercase">MARDENIC</span>
-              <button onClick={close} aria-label="Close navigation" className="p-2 -mr-2 text-white/50 hover:text-white transition-colors">
+            <div className="flex items-center justify-between px-5 py-4 border-b border-gray-200">
+              <span className="text-gray-900 font-semibold tracking-[0.16em] text-sm uppercase">MARDENIC</span>
+              <button onClick={close} aria-label="Close navigation" className="p-2 -mr-2 text-gray-400 hover:text-gray-900 transition-colors">
                 <X size={18} strokeWidth={1.5} />
               </button>
             </div>
 
-            <nav className="flex-1 overflow-y-auto py-6 px-4 flex flex-col gap-1">
+            <nav className="flex-1 overflow-y-auto py-4 px-3 flex flex-col gap-0.5">
               {NAV_LINKS.map((link) => {
                 const active = pathname === link.href;
                 return (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`text-base px-3 py-3 rounded-sm transition-colors duration-150 tracking-wide ${
-                      active ? "bg-white/10 text-white font-medium" : "text-white/50 hover:text-white hover:bg-white/5"
+                    className={`text-base px-3 py-2.5 rounded-sm transition-colors ${
+                      active ? "bg-gray-100 text-gray-900 font-medium" : "text-gray-500 hover:text-gray-900 hover:bg-gray-50"
                     }`}
                   >
                     {link.label}
@@ -163,10 +155,10 @@ export function MobileHeader() {
               })}
             </nav>
 
-            <div className="px-4 pb-8 pt-4 border-t border-white/10">
+            <div className="px-4 pb-6 pt-3 border-t border-gray-200">
               <Link
                 href="/korith"
-                className="block w-full text-center text-sm font-medium bg-white text-black px-5 py-3 rounded-sm hover:bg-white/90 transition-colors"
+                className="block w-full text-center text-sm font-medium bg-gray-900 text-white px-5 py-3 rounded-sm hover:bg-gray-700 transition-colors"
               >
                 Join Waitlist
               </Link>
@@ -177,8 +169,8 @@ export function MobileHeader() {
 
       <style>{`
         @keyframes slideInRight {
-          from { transform: translateX(100%); opacity: 0; }
-          to { transform: translateX(0); opacity: 1; }
+          from { transform: translateX(100%); }
+          to { transform: translateX(0); }
         }
       `}</style>
     </>

@@ -1,57 +1,50 @@
 import Link from "next/link";
-import SectionReveal from "@/components/ui/SectionReveal";
 
 export default function Contact() {
   return (
-    <section
-      id="contact"
-      aria-labelledby="contact-heading"
-      className="py-32 lg:py-44 bg-black border-t border-white/[0.06]"
-    >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
-        <SectionReveal>
-          <span className="text-xs tracking-[0.3em] uppercase text-white/30 font-medium mb-8 block">
-            Get In Touch
-          </span>
-          <h2
-            id="contact-heading"
-            className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-white mb-8 max-w-4xl mx-auto"
-          >
-            Ready to build the future of AI — together?
-          </h2>
-          <p className="text-lg text-white/40 mb-12 max-w-xl mx-auto leading-relaxed">
-            Whether you&apos;re a researcher, an enterprise team, or just
-            curious — we&apos;d like to hear from you.
-          </p>
-        </SectionReveal>
+    <div className="px-6 lg:px-16 py-14 max-w-4xl">
+      <p className="text-xs tracking-[0.2em] uppercase text-gray-400 font-medium mb-8">Contact</p>
 
-        <SectionReveal delay={150}>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/korith"
-              className="group text-base font-medium bg-white text-black px-10 py-4 rounded-sm hover:bg-white/90 transition-all duration-200 flex items-center gap-2"
-            >
-              Join the Korith Waitlist
-              <span className="group-hover:translate-x-0.5 transition-transform duration-200">→</span>
-            </Link>
+      <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 tracking-tight leading-tight mb-6">
+        Ready to build the future of AI — together?
+      </h1>
+
+      <p className="text-base text-gray-500 leading-relaxed max-w-xl mb-12">
+        Whether you&apos;re a researcher, an enterprise team, or just curious — we&apos;d like to hear from you.
+      </p>
+
+      <div className="flex flex-col sm:flex-row gap-3 mb-16">
+        <Link
+          href="/korith"
+          className="inline-flex items-center justify-center gap-2 text-sm font-medium bg-gray-900 text-white px-6 py-3 rounded-sm hover:bg-gray-700 transition-colors duration-200"
+        >
+          Join the Korith Waitlist →
+        </Link>
+        <a
+          href="mailto:hello@mardenic.com"
+          className="inline-flex items-center justify-center text-sm font-medium text-gray-600 border border-gray-300 px-6 py-3 rounded-sm hover:border-gray-500 hover:text-gray-900 transition-colors duration-200"
+        >
+          hello@mardenic.com
+        </a>
+      </div>
+
+      <div className="border-t border-gray-200 pt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          { label: "General Inquiries", email: "hello@mardenic.com" },
+          { label: "Research & Partnerships", email: "research@mardenic.com" },
+          { label: "Privacy & Legal", email: "legal@mardenic.com" },
+        ].map((item) => (
+          <div key={item.label}>
+            <p className="text-xs tracking-[0.15em] uppercase text-gray-400 mb-2">{item.label}</p>
             <a
-              href="mailto:hello@mardenic.com"
-              className="text-base text-white/50 hover:text-white border border-white/20 hover:border-white/40 px-10 py-4 rounded-sm transition-all duration-200"
+              href={`mailto:${item.email}`}
+              className="text-sm text-gray-900 hover:text-gray-500 transition-colors"
             >
-              hello@mardenic.com
+              {item.email}
             </a>
           </div>
-        </SectionReveal>
-
-        {/* Hairline divider */}
-        <SectionReveal delay={250}>
-          <div className="mt-20 lg:mt-28 flex items-center gap-6">
-            <div className="flex-1 h-px bg-white/[0.06]" />
-            <div className="w-6 h-px bg-white/20" />
-            <div className="flex-1 h-px bg-white/[0.06]" />
-          </div>
-        </SectionReveal>
+        ))}
       </div>
-    </section>
+    </div>
   );
 }
