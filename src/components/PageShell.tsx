@@ -8,8 +8,8 @@ export default function PageShell({ children }: { children: React.ReactNode }) {
       <SidebarDesktop />
       <MobileHeader />
       {/* Offset content on desktop to account for sidebar width */}
-      <div className="lg:pl-56 flex flex-col" style={{ minHeight: "100dvh" }}>
-        <main id="main-content" className="pt-14 lg:pt-0 flex flex-col flex-1">
+      <div className="lg:pl-56">
+        <main id="main-content" className="pt-14 lg:pt-0 min-h-screen">
           {children}
         </main>
         <Footer />
