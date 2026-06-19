@@ -52,7 +52,7 @@ export default function Korith() {
       >
         <span
           className="font-bold tracking-[0.08em] uppercase leading-none select-none"
-          style={{ fontSize: "clamp(4rem, 18vw, 14rem)", color: "#E4E2DD" }}
+          style={{ fontSize: "clamp(2rem, 6vw, 5rem)", color: "#A8A59E" }}
           aria-hidden="true"
         >
           MARDENIC
