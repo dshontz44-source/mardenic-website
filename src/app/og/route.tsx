@@ -9,99 +9,60 @@ export async function GET() {
         style={{
           width: "100%",
           height: "100%",
-          background: "#000000",
+          background: "#F0EFEC",
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",
-          justifyContent: "flex-end",
+          justifyContent: "space-between",
           padding: "80px",
           fontFamily: "system-ui, sans-serif",
-          position: "relative",
         }}
       >
-        {/* Background grid pattern */}
+        {/* Top: wordmark */}
         <div
           style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage:
-              "radial-gradient(circle at 70% 30%, rgba(255,255,255,0.04) 0%, transparent 60%)",
-          }}
-        />
-
-        {/* Diamond mark */}
-        <svg
-          width="64"
-          height="64"
-          viewBox="0 0 32 32"
-          style={{ marginBottom: "40px", opacity: 0.9 }}
-        >
-          <path
-            d="M16 2 L30 16 L16 30 L2 16 Z"
-            stroke="white"
-            strokeWidth="1.5"
-            fill="none"
-          />
-          <path
-            d="M9 21 L9 11 L16 18 L23 11 L23 21"
-            stroke="white"
-            strokeWidth="1.75"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-
-        {/* Wordmark */}
-        <div
-          style={{
-            color: "rgba(255,255,255,0.3)",
-            fontSize: "14px",
-            letterSpacing: "0.3em",
+            color: "#1A1917",
+            fontSize: "15px",
+            letterSpacing: "0.22em",
             textTransform: "uppercase",
-            fontWeight: 500,
-            marginBottom: "24px",
+            fontWeight: 600,
           }}
         >
           MARDENIC
         </div>
 
-        {/* Headline */}
-        <div
-          style={{
-            color: "#ffffff",
-            fontSize: "64px",
-            fontWeight: 700,
-            lineHeight: 1.05,
-            letterSpacing: "-0.02em",
-            maxWidth: "700px",
-          }}
-        >
-          Intelligence that doesn&apos;t compromise.
+        {/* Middle: headline + subline */}
+        <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+          <div
+            style={{
+              color: "#1A1917",
+              fontSize: "68px",
+              fontWeight: 700,
+              lineHeight: 1.05,
+              letterSpacing: "-0.02em",
+              maxWidth: "780px",
+            }}
+          >
+            Intelligence that doesn't compromise.
+          </div>
+          <div
+            style={{
+              color: "#78756E",
+              fontSize: "22px",
+              lineHeight: 1.5,
+              maxWidth: "580px",
+            }}
+          >
+            AI Research & Development — safety at the core.
+          </div>
         </div>
 
-        {/* Subline */}
+        {/* Bottom: domain */}
         <div
           style={{
-            color: "rgba(255,255,255,0.4)",
-            fontSize: "22px",
-            marginTop: "24px",
-            lineHeight: 1.5,
-            maxWidth: "600px",
-          }}
-        >
-          AI Research & Development — without compromising safety.
-        </div>
-
-        {/* Bottom right badge */}
-        <div
-          style={{
-            position: "absolute",
-            bottom: "80px",
-            right: "80px",
-            color: "rgba(255,255,255,0.2)",
-            fontSize: "13px",
-            letterSpacing: "0.1em",
+            color: "#A8A59E",
+            fontSize: "14px",
+            letterSpacing: "0.08em",
           }}
         >
           mardenic.com
