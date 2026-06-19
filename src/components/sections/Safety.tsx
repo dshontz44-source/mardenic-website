@@ -2,7 +2,7 @@ import { SAFETY_PRINCIPLES } from "@/lib/constants";
 
 export default function Safety() {
   return (
-    <div>
+    <div className="flex flex-col flex-1">
       <div className="px-6 lg:px-16 py-14" style={{ background: "#FFFFFF", borderBottom: "1px solid #E4E2DD" }}>
         <p className="text-xs tracking-[0.2em] uppercase font-medium mb-6" style={{ color: "#A8A59E" }}>Mardenic — Safety</p>
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight mb-6" style={{ color: "#1A1917" }}>
@@ -29,7 +29,7 @@ export default function Safety() {
         ))}
       </div>
 
-      <div className="px-6 lg:px-16 py-10" style={{ background: "#F0EFEC" }}>
+      <div className="px-6 lg:px-16 py-10" style={{ background: "#F0EFEC", flex: 1 }}>
         <p className="text-xs leading-relaxed max-w-lg" style={{ color: "#A8A59E" }}>
           Our safety commitments are not marketing language. If a capability fails our
           internal safety review, it does not ship — regardless of competitive pressure.

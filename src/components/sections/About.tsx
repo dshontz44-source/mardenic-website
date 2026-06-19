@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div>
+    <div className="flex flex-col flex-1">
       {/* Page header */}
       <div className="px-6 lg:px-16 py-14" style={{ background: "#FFFFFF", borderBottom: "1px solid #E4E2DD" }}>
         <p className="text-xs tracking-[0.2em] uppercase font-medium mb-6" style={{ color: "#A8A59E" }}>Mardenic — What We Do</p>
@@ -41,7 +41,7 @@ export default function About() {
       </div>
 
       {/* For Companies */}
-      <div className="px-6 lg:px-16 py-12" style={{ background: "#F0EFEC" }}>
+      <div className="px-6 lg:px-16 py-12" style={{ background: "#F0EFEC", flex: 1 }}>
         <p className="text-xs tracking-[0.2em] uppercase font-medium mb-8" style={{ color: "#A8A59E" }}>For Companies & SaaS Teams</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[

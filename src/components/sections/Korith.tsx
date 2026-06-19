@@ -3,7 +3,7 @@ import { KORITH_CAPABILITIES } from "@/lib/constants";
 
 export default function Korith() {
   return (
-    <div>
+    <div className="flex flex-col flex-1">
       <div className="px-6 lg:px-16 py-14" style={{ background: "#FFFFFF", borderBottom: "1px solid #E4E2DD" }}>
         <div className="flex items-center gap-3 mb-6">
           <p className="text-xs tracking-[0.2em] uppercase font-medium" style={{ color: "#A8A59E" }}>Mardenic — Korith</p>
@@ -24,7 +24,7 @@ export default function Korith() {
         </p>
       </div>
 
-      <div className="px-6 lg:px-16 py-12 grid grid-cols-1 md:grid-cols-2 gap-12" style={{ background: "#F7F6F3", borderBottom: "1px solid #E4E2DD" }}>
+      <div className="px-6 lg:px-16 py-12 grid grid-cols-1 md:grid-cols-2 gap-12" style={{ background: "#F7F6F3", flex: 1 }}>
         <div>
           <p className="text-xs tracking-[0.2em] uppercase font-medium mb-5" style={{ color: "#A8A59E" }}>Capabilities</p>
           <ul className="space-y-3">
