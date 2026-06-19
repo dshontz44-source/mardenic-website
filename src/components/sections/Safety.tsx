@@ -29,11 +29,17 @@ export default function Safety() {
         ))}
       </div>
 
-      <div className="px-6 lg:px-16 py-10" style={{ background: "#F0EFEC" }}>
-        <p className="text-xs leading-relaxed max-w-lg" style={{ color: "#A8A59E" }}>
+      <div className="px-6 lg:px-16 py-10 pb-20 lg:pb-28" style={{ background: "#F0EFEC" }}>
+        <p className="text-xs leading-relaxed max-w-lg mb-16 lg:mb-24" style={{ color: "#A8A59E" }}>
           Our safety commitments are not marketing language. If a capability fails our
           internal safety review, it does not ship — regardless of competitive pressure.
         </p>
+        <blockquote className="max-w-xl">
+          <p className="text-2xl lg:text-3xl font-medium leading-snug tracking-tight" style={{ color: "#1A1917" }}>
+            "We don't race to ship. We race to get it right."
+          </p>
+          <footer className="mt-5 text-xs tracking-[0.2em] uppercase" style={{ color: "#78756E" }}>Mardenic</footer>
+        </blockquote>
       </div>
     </div>
   );

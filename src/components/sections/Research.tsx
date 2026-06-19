@@ -29,6 +29,13 @@ export default function Research() {
             <span className="text-xs md:text-right" style={{ color: "#A8A59E" }}>{post.date}</span>
           </div>
         ))}
+
+        <blockquote className="px-6 lg:px-16 py-16 lg:py-24 max-w-2xl">
+          <p className="text-2xl lg:text-3xl font-medium leading-snug tracking-tight" style={{ color: "#1A1917" }}>
+            "The research community benefits when we share what we learn. We intend to share everything."
+          </p>
+          <footer className="mt-5 text-xs tracking-[0.2em] uppercase" style={{ color: "#A8A59E" }}>Mardenic</footer>
+        </blockquote>
       </div>
     </div>
   );
