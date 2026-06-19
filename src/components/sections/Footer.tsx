@@ -5,14 +5,15 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer role="contentinfo" className="border-t border-gray-200 px-6 lg:px-16 py-10">
+    <footer role="contentinfo" className="px-6 lg:px-16 py-10" style={{ borderTop: "1px solid #E4E2DD", background: "#F0EFEC" }}>
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
         <div className="flex flex-wrap gap-5">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-xs text-gray-400 hover:text-gray-900 transition-colors"
+              className="text-xs transition-colors"
+              style={{ color: "#A8A59E" }}
             >
               {link.label}
             </Link>
@@ -23,16 +24,17 @@ export default function Footer() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-xs text-gray-400 hover:text-gray-900 transition-colors"
+              className="text-xs transition-colors"
+              style={{ color: "#A8A59E" }}
             >
               {link.label}
             </Link>
           ))}
         </div>
       </div>
-      <div className="mt-6 pt-6 border-t border-gray-100 flex items-center justify-between">
-        <span className="text-xs text-gray-400 tracking-[0.1em] uppercase">Mardenic</span>
-        <span className="text-xs text-gray-400">&copy; {year} Mardenic. All rights reserved.</span>
+      <div className="mt-6 pt-6 flex items-center justify-between" style={{ borderTop: "1px solid #E4E2DD" }}>
+        <span className="text-xs tracking-[0.1em] uppercase" style={{ color: "#CBC9C2" }}>Mardenic</span>
+        <span className="text-xs" style={{ color: "#CBC9C2" }}>&copy; {year} Mardenic. All rights reserved.</span>
       </div>
     </footer>
   );

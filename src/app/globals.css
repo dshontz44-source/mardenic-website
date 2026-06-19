@@ -1,38 +1,40 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #ffffff;
-  --color-foreground: #111111;
-  --color-gray-50: #fafafa;
-  --color-gray-100: #f4f4f4;
-  --color-gray-200: #e8e8e8;
-  --color-gray-300: #d1d1d1;
-  --color-gray-400: #a3a3a3;
-  --color-gray-500: #737373;
-  --color-gray-600: #525252;
-  --color-gray-700: #404040;
-  --color-gray-800: #262626;
-  --color-gray-900: #171717;
+  /* Warm off-white palette — layered, never blinding */
+  --color-canvas: #F7F6F3;       /* page background — warm off-white */
+  --color-surface: #FFFFFF;       /* cards, raised elements */
+  --color-muted: #F0EFEC;        /* alternate section tint */
+  --color-border: #E4E2DD;       /* subtle warm borders */
+  --color-border-light: #EDECEA; /* very light borders */
+
+  --color-gray-50: #F7F6F3;
+  --color-gray-100: #EDECEA;
+  --color-gray-200: #E4E2DD;
+  --color-gray-300: #CBC9C2;
+  --color-gray-400: #A8A59E;
+  --color-gray-500: #78756E;
+  --color-gray-600: #57554F;
+  --color-gray-700: #3D3C38;
+  --color-gray-800: #28271F;     /* sidebar background */
+  --color-gray-900: #1A1917;     /* primary text, buttons */
+
   --font-sans: var(--font-geist-sans), 'Inter', system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+*, *::before, *::after { box-sizing: border-box; }
 
 html {
-  background: #ffffff;
-  color: #111111;
+  background: #F7F6F3;
+  color: #1A1917;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: #ffffff;
-  color: #111111;
+  background: #F7F6F3;
+  color: #1A1917;
   font-family: var(--font-geist-sans), 'Inter', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -44,8 +46,8 @@ body {
   position: absolute;
   top: -100%;
   left: 1rem;
-  background: #111;
-  color: #fff;
+  background: #1A1917;
+  color: #F7F6F3;
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
   font-weight: 600;
@@ -54,24 +56,17 @@ body {
   z-index: 9999;
   transition: top 0.2s;
 }
-.skip-link:focus {
-  top: 0;
-}
+.skip-link:focus { top: 0; }
 
 :focus-visible {
-  outline: 2px solid #111111;
+  outline: 2px solid #1A1917;
   outline-offset: 3px;
 }
 
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: #fff; }
-::-webkit-scrollbar-thumb { background: #d1d1d1; border-radius: 2px; }
-::-webkit-scrollbar-thumb:hover { background: #a3a3a3; }
-
-.hairline {
-  border: none;
-  border-top: 1px solid #e8e8e8;
-}
+::-webkit-scrollbar-track { background: #F7F6F3; }
+::-webkit-scrollbar-thumb { background: #CBC9C2; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #A8A59E; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
