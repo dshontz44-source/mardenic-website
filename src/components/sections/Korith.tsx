@@ -47,12 +47,12 @@ export default function Korith() {
       </div>
 
       <div
-        className="flex items-end px-6 lg:px-12 py-10 overflow-hidden"
+        className="flex items-center justify-center px-6 py-12"
         style={{ background: "#F7F6F3", borderTop: "1px solid #E4E2DD" }}
       >
         <span
-          className="font-bold tracking-[0.08em] uppercase leading-none select-none"
-          style={{ fontSize: "clamp(2rem, 6vw, 5rem)", color: "#A8A59E" }}
+          className="font-semibold tracking-[0.2em] uppercase select-none"
+          style={{ fontSize: "1.5rem", color: "#57554F" }}
           aria-hidden="true"
         >
           MARDENIC
