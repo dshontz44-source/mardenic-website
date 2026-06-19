@@ -13,7 +13,7 @@ export default function Footer() {
               key={link.href}
               href={link.href}
               className="text-xs transition-colors"
-              style={{ color: "#A8A59E" }}
+              style={{ color: "#57554F" }}
             >
               {link.label}
             </Link>
@@ -25,7 +25,7 @@ export default function Footer() {
               key={link.href}
               href={link.href}
               className="text-xs transition-colors"
-              style={{ color: "#A8A59E" }}
+              style={{ color: "#57554F" }}
             >
               {link.label}
             </Link>
@@ -33,8 +33,8 @@ export default function Footer() {
         </div>
       </div>
       <div className="mt-6 pt-6 flex items-center justify-between" style={{ borderTop: "1px solid #E4E2DD" }}>
-        <span className="text-xs tracking-[0.1em] uppercase" style={{ color: "#CBC9C2" }}>Mardenic</span>
-        <span className="text-xs" style={{ color: "#CBC9C2" }}>&copy; {year} Mardenic. All rights reserved.</span>
+        <span className="text-xs tracking-[0.1em] uppercase" style={{ color: "#A8A59E" }}>Mardenic</span>
+        <span className="text-xs" style={{ color: "#A8A59E" }}>&copy; {year} Mardenic. All rights reserved.</span>
       </div>
     </footer>
   );
