@@ -29,7 +29,7 @@ export default function About() {
       {/* Stats */}
       <div className="px-6 lg:px-16 py-10 grid grid-cols-3 gap-8" style={{ background: "#FFFFFF", borderBottom: "1px solid #E4E2DD" }}>
         {[
-          { label: "Founded", value: "2024" },
+          { label: "Founded", value: "2026" },
           { label: "Focus", value: "Safety-First AI" },
           { label: "Stage", value: "Research" },
         ].map((item) => (
